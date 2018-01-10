@@ -24,7 +24,7 @@ class SiteNavi extends React.Component {
             </li>
             <li
               className={
-                location.pathname.startsWith('/blog') ? 'nav-item active' : 'nav-item'
+                location.pathname.startsWith('/blog') || location.pathname === '/blog' ? 'nav-item active' : 'nav-item'
               }
             >
               <Link to="/blog" className="nav-link">
