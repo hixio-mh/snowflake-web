@@ -7,7 +7,7 @@ class SiteNavi extends React.Component {
     const { location, title } = this.props
     return (
       <header className="navbar navbar-expand navbar-light flex-column flex-md-row bd-navbar bg-primary">
-        <Link class="navbar-brand mr-0 mr-md-2" to="/" aria-label="Snowflake">
+        <Link className="navbar-brand mr-0 mr-md-2" to="/" aria-label="Snowflake">
           <img src="/svg/banner.svg" style={{height: 63, width: 300, pointerEvents: 'none', padding: 0, margin: 0}}/>
         </Link>
 
@@ -38,7 +38,7 @@ class SiteNavi extends React.Component {
                   : 'nav-item'
               }
             >
-            <a class="nav-link" href="https://github.com/SnowflakePowered">GitHub</a>
+            <a className="nav-link" href="https://github.com/SnowflakePowered">GitHub</a>
             </li>
           </ul>
         </div>

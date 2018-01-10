@@ -11,7 +11,7 @@ class Jumbotron extends React.Component {
         <div className="jumbotron jumbotron-home text-center">
           <div className="container centered">
             <img src="/svg/logo.svg" style={{ pointerEvents: 'none', height: 300, width: 300 }} />
-            <p class="jumbotron-lead">
+            <p className="jumbotron-lead">
               An extensible framework and frontend for modern emulators.
             </p>
           </div>
