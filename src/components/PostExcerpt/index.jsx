@@ -4,7 +4,6 @@ import forEach from 'lodash/forEach'
 import get from 'lodash/get'
 import size from 'lodash/size'
 import Adsense from '../Adsense'
-import ReadNext from '../ReadNext'
 import './style.scss'
 import * as path from 'path'
 
