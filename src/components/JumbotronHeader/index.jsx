@@ -10,7 +10,7 @@ class JumbotronHeader extends React.Component {
       <div>
         <div className="jumbotron text-center jumbotron-header jumbotron-header-dark">
           <div className="container centered">
-            <div class="display-3">
+            <div className="display-3">
               {this.props.title}
             </div>
           </div>

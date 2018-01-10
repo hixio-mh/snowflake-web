@@ -16,6 +16,9 @@ class Jumbotron extends React.Component {
             </p>
           </div>
         </div>
+        <div className="subtron text-center">
+          Snowflake is still under heavy development. Follow our progress on <a href="https://github.com/SnowflakePowered/snowflake">GitHub</a>.
+        </div>
       </div>
     )
   }
