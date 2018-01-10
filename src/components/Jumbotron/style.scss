@@ -1,0 +1,13 @@
+@import '../../layouts/colors.scss';
+@import '../../layouts/fonts.scss';
+
+.jumbotron {
+  background: $white;
+  border-radius: 0px;
+}
+
+.jumbotron-lead {
+  font-size: 2.4rem;
+  font-weight: 300;
+  font-family: $font-family-sans-serif;
+}

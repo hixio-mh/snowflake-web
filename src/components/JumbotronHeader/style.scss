@@ -1,0 +1,31 @@
+@import '../../layouts/colors.scss';
+@import '../../layouts/fonts.scss';
+
+.jumbotron-header-dark {
+  background: $gray-900;
+  background: linear-gradient(15deg, $lilac, $periwinkle);
+  color: $gray-100;
+  overflow: hidden;
+  z-index: 10;
+  position: relative;
+  &::before {
+    content: ' ';
+    z-index: -1;
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .container {
+    z-index: 11;
+  }
+}
+
+.jumbotron-header {
+  text-transform: uppercase;
+}
