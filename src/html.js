@@ -35,11 +35,15 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
           {css}
           <link
-            href="/img/apple-touch-icon.png"
+            href="/img/apple-touch-icon-180x180.png"
             rel="apple-touch-icon"
             sizes="180x180"
           />
+          <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+          <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+          <link rel="icon" type="image/png" href="/img/pwa-192x192.png" sizes="192x192" />
           <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+          <meta name="msapplication-config" content="/img/browserconfig.xml"/>
         </head>
         <body>
           <div

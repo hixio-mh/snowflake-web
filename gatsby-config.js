@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'Snowflake',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: 'Snowflake Authors',
+    description: 'Snowflake Emulator Frontend',
+    siteUrl: 'https://snowflakepowe.red',
+    author: 'Ronny Chan',
     twitter: 'chyyran',
     adsense: '',
   },
@@ -43,20 +43,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
+        name: 'Snowflake',
+        short_name: 'Snowflake',
         start_url: '/',
         background_color: '#fff',
-        theme_color: '#673ab7',
+        theme_color: '#e4bfff',
         display: 'minimal-ui',
         icons: [
           {
-            src: '/img/android-chrome-192x192.png',
+            src: '/img/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/img/android-chrome-512x512.png',
+            src: '/img/pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
