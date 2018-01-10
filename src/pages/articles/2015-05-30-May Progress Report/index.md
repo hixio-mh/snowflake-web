@@ -9,21 +9,21 @@ categories:
 ---
 Snowflake has come a long way from a bunch of hacky Python scripts. 2 years since I started working on a frontend, I’ve finally managed to build something that actually resembles one with C#, HTML5 and Javascript. Snowflake finally comes to a semblance of reality, an app that a person can actually use, and I’m extremely excited to show it off. Everything you see, and more will be available by **July’s alpha release.**
 
-![screenshot](http://i.imgur.com/66VDHTW.png)If you’ve been following Snowflake’s development this screenshot should feel familiar. This Material Design theme will be Snowflake’s very first theme, built to feel familiar and intuitive. Once I’ve established how everything fits together, **I’ll reuse parts of the code to build an XMB-like 10-foot interface.** This screenshot just shows off the dynamic colour-schemes I have going on that determine the colours by the cover art.
+![screenshot](https://i.imgur.com/66VDHTW.png)If you’ve been following Snowflake’s development this screenshot should feel familiar. This Material Design theme will be Snowflake’s very first theme, built to feel familiar and intuitive. Once I’ve established how everything fits together, **I’ll reuse parts of the code to build an XMB-like 10-foot interface.** This screenshot just shows off the dynamic colour-schemes I have going on that determine the colours by the cover art.
 
 I’ve made some optimizations to this feature by caching the colours, so it only has to calculate the colours once; this resulted in a speedup of at least 10FPS during transitions going by Chrome’s dev tools.
 
-![flags](http://fat.gfycat.com/FabulousEmptyDragon.gif)
+![flags](https://fat.gfycat.com/FabulousEmptyDragon.gif)
 
 One of Snowflake’s most important features is setting emulator options inside the interface. When you make a change in setting to a certain game, it’s marked _customized_ for that game, unless you reset it to default. Every time you access the settings, any option not marked _customized_ for a game will re-sync with the defaults. If you make a change to a default, those changes will propagate to every single game which doesn’t have the option marked customized.
 
 The system is remarkably simple. You can set an option, and the emulator plugin just flips a few switches, generates a configuration file and runs the emulator with the selected ROM. This will work with _any_ emulator that uses configuration files.
 
-![controller-select](http://fat.gfycat.com/KeyTanFieldspaniel.gif)
+![controller-select](https://fat.gfycat.com/KeyTanFieldspaniel.gif)
 
 You can also change controller settings inside Snowflake. How it works is, Snowflake stores a “definition” for a certain controller, that’s linked to a certain platform — the _NES_CONTROLLER_ is linked to the NES platform, etc. Then, for each controller, there’s a profile that’s linked with a certain input device. Usually the profile name is the same as the full device name, but for convinience, Snowflake gives the keyboard and 4 XInput controllers names that are easier remember than `Microsoft Xbox 360 Controller (for Windows)`.
 
-![set-input](http://giant.gfycat.com/QuestionableWelltodoGrassspider.gif)
+![set-input](https://giant.gfycat.com/QuestionableWelltodoGrassspider.gif)
 
 Click the input you want to change, and a dialog will pop up. Press the new key you want, save your changes, and your controller setting for **every emulator for that platform** has been changed, just as if you were using a core in RetroArch. Except instead, we’re just wrapping an EXE. And it’s easier to use.
 

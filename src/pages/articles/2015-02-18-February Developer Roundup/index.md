@@ -47,4 +47,4 @@ I'm trying to get a basic, unstyled HTML testing UI up as soon as possible so I 
 
 [Fure-kun](https://github.com/SnowflakePowered/fure-kun) is a side-project-thingy Hubot that gets Travis and Appveyor statuses for Snowflake and can trigger rebuilds. If you're wondering about the name, the katakana under the Snowflake logo (&#12473;&#12494;&#12540;&#12501;&#12524;&#12540;&#12463;) reads "sun&#333;fur&#275;ku", ergo, "Fure-kun". Theres no license up on the repo because I'm too lazy, but if you want the source, treat it as MIT.
 
-**Join me on IRC at `irc.stormbit.net#snowflake` or [webchat](http://iris.stormbit.net/?channels=#snowflake)**
+**Join me on IRC at `irc.stormbit.net#snowflake` or [webchat](https://iris.stormbit.net/?channels=#snowflake)**

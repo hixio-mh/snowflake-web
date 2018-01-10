@@ -12,14 +12,14 @@ path: blog/input-pipeline
 
 **As of the time of writing, this article talks about upcoming API features in PR [#229](https://github.com/SnowflakePowered/snowflake/pull/229), which has yet to be merged. If you are interested, please leave your comments on the API design in the Pull Request discussion. PR #229 is one of the largest rewrites in Snowflake before 1.0 and will be the final configuration and input API.**
 
-Unlike your traditional frontend, [Snowflake takes a hybrid approach](http://snowflakepowe.red/config-generation-part1/) when it comes to working with different emulators. Because of the varied nature of video game controllers and input devices, the input handling pipeline is one of the most complex and involved subsystems in Snowflake, having undergone several rewrites and redesigns.
+Unlike your traditional frontend, [Snowflake takes a hybrid approach](https://snowflakepowe.red/config-generation-part1/) when it comes to working with different emulators. Because of the varied nature of video game controllers and input devices, the input handling pipeline is one of the most complex and involved subsystems in Snowflake, having undergone several rewrites and redesigns.
 
 Handling input is a multifaceted problem that considers physical devices and their use cases, the different ways emulators accept input configuration, how the controller is laid out on the emulated console, as well as special consideration for non-conventional devices such as the Wii Remote and the Nintendo DS Touchscreen. With all this in mind, Snowflake also supports different profiles for every controller, so you can re-map your input method any way you want. Let's explore how all the puzzle pieces fit together into a complex but elegant and powerful solution .
 
 
 ## The takeaway — TL;DR
 
-* Snowflake uses the [Stone specification](http://github.com/SnowflakePowered/stone), a database of platform and controller information compiled for general use, not just Snowflake.
+* Snowflake uses the [Stone specification](https://github.com/SnowflakePowered/stone), a database of platform and controller information compiled for general use, not just Snowflake.
 * Using abstractions on top of the physical gamepad device, and a defined layout for an emulated controller, we can map a guest controller/gamepad to a host device in a mostly declarative manner during configuration generation.
 * The system is flexible enough to work for most if not all emulators, and across a wide range of controllers, physical or emulated.
 * Devices must have a plugin that exposes metadata from the OS, and the device layout to Snowflake.

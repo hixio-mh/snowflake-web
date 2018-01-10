@@ -16,15 +16,15 @@ This month's main attraction is the new Modules API that will serve as the basis
 
 While the UI is not yet usable, I did get a lot of parts of the Material Design theme done in isolation these few weeks.
 
-![main view](http://i.imgur.com/xybB3bS.png)
+![main view](https://i.imgur.com/xybB3bS.png)
 
-This will be the "Home", or the main view of the Material Design theme; the big red header section is meant to display some information about the currently selected platform. This view might have been one of the most difficult ones to write; a huge challenge was figuring out how to performantly display over a hundred games. Fortunately, [react-virtualized](https://github.com/bvaughn/react-virtualized) helped a bunch, but there is still some jankiness when there are over 300 games; I couldn't figure out how to optimize this yet so I'm hoping React Fiber will smooth this out once [it's ready](http://isfiberreadyyet.com/).
+This will be the "Home", or the main view of the Material Design theme; the big red header section is meant to display some information about the currently selected platform. This view might have been one of the most difficult ones to write; a huge challenge was figuring out how to performantly display over a hundred games. Fortunately, [react-virtualized](https://github.com/bvaughn/react-virtualized) helped a bunch, but there is still some jankiness when there are over 300 games; I couldn't figure out how to optimize this yet so I'm hoping React Fiber will smooth this out once [it's ready](https://isfiberreadyyet.com/).
 
-![platform view](http://i.imgur.com/hh63dzP.gif)
+![platform view](https://i.imgur.com/hh63dzP.gif)
 
 This is how one would select a platform to view games for; instead of having a sidebar like a lot of desktop-oriented frontends, I decided to go with a separate menu instead. Perhaps this might be too mobile-like but for now this is how it'll stay for this theme at least.
 
-![game view](http://i.imgur.com/iaHwxte.png)
+![game view](https://i.imgur.com/iaHwxte.png)
 
 This is very much a work in progress; the game view is where users can set launch options for their emulator, view and edit details about the game, and change their controller configuration. The UI toolkit I'm using, [Material-UI v1](https://material-ui-1dab0.firebaseapp.com), doesn't support all the components I need to make this work properly, so I will need to work around that by using their older version. Please ignore the fact that there is a Super Mario Bros. image on top of a Super Mario World background..
 
@@ -38,7 +38,7 @@ Since the port to .NET Core, plugin loading has been extremely fragile; it was b
 
 Not only have I completely rewritten the plugin loading backend, there have been some changes made to the way plugins have to be packaged to make things easier to manage and install. Before, plugins and all their dependencies were simply thrown into the *plugins* folder. Proper load order was basically hoping for the best, which isn't quite reliable especially if you have pluginsn depending on plugins. Now, plugins are packaged as *modules*, which are loaded individually and have separate folders to put their dependencies in. Each plugin is loaded in isolation to other plugins, so dependency load order is always correct. 
 
-![plugin format](http://i.imgur.com/n0ePzFC.gif)
+![plugin format](https://i.imgur.com/n0ePzFC.gif)
 
 Another change made to the plugin system are how they are initialized. Before, plugins were registered with the plugin manager through a container that had access to the entire instance of Snowflake. There was no way to tell what plugin had access to what services, and no way to tell if a plugin can even be loaded properly when a service doesn't exist. The new method requires all plugin containers to list which services they require, so that the plugin loader when to load a plugin, when all of its required services are available. If the services are never available, the plugin will simply never be loaded. 
 
