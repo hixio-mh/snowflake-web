@@ -47,7 +47,7 @@ module.exports = {
         short_name: 'Snowflake',
         start_url: '/',
         background_color: '#fff',
-        theme_color: '#e4bfff',
+        theme_color: '#d4e5ff',
         display: 'minimal-ui',
         icons: [
           {
