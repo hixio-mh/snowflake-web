@@ -31,16 +31,12 @@ class SiteNavi extends React.Component {
                 Blog
               </Link>
             </li>
-            <li
-              className={
-                location.pathname === '/profile/'
-                  ? 'nav-item active'
-                  : 'nav-item'
-              }
-            >
-            <a className="nav-link" href="https://docs.snowflakepowe.red/">Docs</a>
-            <a className="nav-link" href="https://github.com/SnowflakePowered">GitHub</a>
-            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="https://docs.snowflakepowe.red/">Docs</a>
+            </li> 
+             <li className="nav-item">
+              <a className="nav-link" href="https://github.com/SnowflakePowered">GitHub</a>
+            </li> 
           </ul>
         </div>
       </header>
