@@ -38,6 +38,7 @@ class SiteNavi extends React.Component {
                   : 'nav-item'
               }
             >
+            <a className="nav-link" href="https://docs.snowflakepowe.red/">Docs</a>
             <a className="nav-link" href="https://github.com/SnowflakePowered">GitHub</a>
             </li>
           </ul>
