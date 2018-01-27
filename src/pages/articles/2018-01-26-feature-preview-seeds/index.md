@@ -1,5 +1,5 @@
 ---
-title: Feature Preview &mdash; Seed/Tree Scraping 
+title: Feature Preview - Seed/Tree Scraping 
 date: 2018-01-12
 categories: 
   - spotlight
