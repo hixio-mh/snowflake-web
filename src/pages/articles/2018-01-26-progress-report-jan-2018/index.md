@@ -5,19 +5,13 @@ categories:
   - feature
   - technical
   - scraping
+path: blog/progress-report-january-2018
+layout: post
 ---
 
 It's been nearly four years since work began on this current (and longest lasting) incarnation of Snowflake; it seems amazing that even four years later changes are still being made to its core parts. Naive I was that I never expected the project to balloon into what it became four years after the fact, but Snowflake has never been better   today than since conception. 
 
 Much has changed since the last progress report, a combination of distractions, real life, and a lack of time resulted in no new reports written since the beginning of the summer. Rest assured there's been [much work](https://github.com/SnowflakePowered/snowflake/pulls?q=is%3Apr+is%3Aclosed) since June, especially to the older parts of the core framework that were completely rearchitectured. 
-
-## Patreon and Discord
-
-Snowflake has been in development for a long time without shipping anything usable end-users. Despite that there are a few people that have been following my blogs for as long as I've been writing them, and some of those have asked me about a Patreon. I've held off for now since there really is no use for Snowflake without a proper UI, but as I'll describe later that shouldn't be a hurdle to having a minimum viable product anymore.
-
-Hence as of today I've opened up donations on Patreon. There aren't too many perks so far but I'll be expanding it slowly in the future. 
-
-A very long time ago I used to place ads on this webside through Google Adsense. Never really made more than $10, and ads mess with my aesthetic sense. I don't expect to make very much through Patreon either, but a few bucks here and there would be very much appreciated. 
 
 ## Website and Branding Redesign 
 
