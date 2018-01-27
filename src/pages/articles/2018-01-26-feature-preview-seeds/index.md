@@ -5,6 +5,8 @@ categories:
   - spotlight
   - technical
   - scraping
+path: blog/feature-preview-seeds
+layout: post
 ---
 
 
