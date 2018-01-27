@@ -1,6 +1,6 @@
 ---
-title: Snowflake Progress Report - January 2018 
-date: 2018-01-12
+title: Snowflake Progress Report - January 2018
+date: 2018-01-26
 categories: 
   - feature
   - technical
