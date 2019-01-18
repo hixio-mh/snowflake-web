@@ -75,14 +75,6 @@
       "prettier --write",
       "git add"
     ],
-    "*.css": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.scss": [
-      "prettier --write",
-      "git add"
-    ],
     "*.md": [
       "npm run lint:textfix",
       "git add"
