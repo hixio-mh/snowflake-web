@@ -1,5 +1,5 @@
-@import '../../layouts/colors.scss';
-@import '../../layouts/fonts.scss';
+@import '../Layout/colors.scss';
+@import '../Layout/fonts.scss';
 
 .articles {
   padding-top: 40px;
@@ -48,7 +48,7 @@
 
       h2::before {
         content: '# ';
-        font-family: $font-family-title;        
+        font-family: $font-family-title;
         font-weight: 300;
       }
 

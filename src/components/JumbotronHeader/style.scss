@@ -1,9 +1,9 @@
-@import '../../layouts/colors.scss';
-@import '../../layouts/fonts.scss';
+@import '../Layout/colors.scss';
+@import '../Layout/fonts.scss';
 
 .jumbotron-header-dark {
   background: $gray-900;
-  background: linear-gradient(15deg, $lilac, $periwinkle);
+  background: linear-gradient(15deg, $lilac, $periwinkle) !important;
   color: $gray-100;
   overflow: hidden;
   z-index: 10;

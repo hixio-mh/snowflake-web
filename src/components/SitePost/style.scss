@@ -1,5 +1,5 @@
-@import '../../layouts/colors.scss';
-@import '../../layouts/fonts.scss';
+@import '../Layout/colors.scss';
+@import '../Layout/fonts.scss';
 
 .articles {
   padding-top: 40px;
@@ -23,11 +23,21 @@
         margin-right: 3px;
       }
 
-      time {
+      time,
+      .article-time {
         font-size: $font-size-xs;
         color: $gray-500;
         display: inline;
+        margin-right: 5px;
+      }
+
+      .article-time {
         margin-right: 10px;
+      }
+
+      .article-time::before {
+        content: '\2022';
+        margin-right: 5px;
       }
     }
 
@@ -44,7 +54,7 @@
 
       h2::before {
         content: '# ';
-        font-family: $font-family-title;        
+        font-family: $font-family-title;
         font-weight: 300;
       }
 

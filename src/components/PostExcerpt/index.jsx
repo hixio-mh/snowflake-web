@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
-import size from 'lodash/size'
 import Adsense from '../Adsense'
 import './style.scss'
 import * as path from 'path'
@@ -45,8 +44,16 @@ class PostExcerpt extends React.Component {
 
   parseDate(filePath) {
     const directoryName = path.basename(path.dirname(filePath))
-    const directoryDate = directoryName.match(/^(19|20)\d\d([- /.])(([0-1]?)[1-9]|1[012])\2(([0-1]?)[1-9]|[12][0-9]|3[01])/)[0]
-    return new Date(directoryDate).toISOString().replace('-', '/').split('T')[0].replace('-', '/') || ""
+    const directoryDate = directoryName.match(
+      /^(19|20)\d\d([- /.])(([0-1]?)[1-9]|1[012])\2(([0-1]?)[1-9]|[12][0-9]|3[01])/
+    )[0]
+    return (
+      new Date(directoryDate)
+        .toISOString()
+        .replace('-', '/')
+        .split('T')[0]
+        .replace('-', '/') || ''
+    )
   }
 
   render() {
@@ -77,11 +84,9 @@ class PostExcerpt extends React.Component {
             </div>
             {ad}
             <div className="page-content">
-              { excerpt }
+              {excerpt}
               <div className="read-link">
-                <Link to={path}>
-                Read More
-                </Link>
+                <Link to={path}>Read More</Link>
               </div>
             </div>
             {ad}

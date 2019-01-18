@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'gatsby-link'
 import forEach from 'lodash/forEach'
 import get from 'lodash/get'
-import size from 'lodash/size'
 import Adsense from '../Adsense'
 import './style.scss'
 import * as path from 'path'
@@ -45,12 +44,20 @@ class SitePost extends React.Component {
 
   parseDate(filePath) {
     const directoryName = path.basename(path.dirname(filePath))
-    const directoryDate = directoryName.match(/^(19|20)\d\d([- /.])(([0-1]?)[1-9]|1[012])\2(([0-1]?)[1-9]|[12][0-9]|3[01])/)[0]
-    return new Date(directoryDate).toISOString().replace('-', '/').split('T')[0].replace('-', '/') || ""
+    const directoryDate = directoryName.match(
+      /^(19|20)\d\d([- /.])(([0-1]?)[1-9]|1[012])\2(([0-1]?)[1-9]|[12][0-9]|3[01])/
+    )[0]
+    return (
+      new Date(directoryDate)
+        .toISOString()
+        .replace('-', '/')
+        .split('T')[0]
+        .replace('-', '/') || ''
+    )
   }
 
   render() {
-    const { site, data, isIndex } = this.props
+    const { site, data, isIndex, time } = this.props
     const title = get(data, 'frontmatter.title')
     const path = get(data, 'frontmatter.path')
     const date = data.frontmatter.date || this.parseDate(data.fileAbsolutePath)
@@ -75,6 +82,7 @@ class SitePost extends React.Component {
                 <h1>{title}</h1>
                 <time dateTime={date}>{date}</time>
               </Link>
+              <span className="article-time">{time}</span>
               {this.categories(cate)}
             </div>
             {ad}

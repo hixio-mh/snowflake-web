@@ -1,16 +1,15 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import { siteMetadata } from '../../gatsby-config'
-import SiteNavi from '../components/SiteNavi'
+import { siteMetadata } from '../../../gatsby-config'
+import SiteNavi from '../SiteNavi'
 import emergence from 'emergence.js'
-import Footer from '../components/Footer'
+import Footer from '../Footer'
 import './gatstrap.scss'
 import 'animate.css/animate.css'
 import 'prismjs/themes/prism-okaidia.css'
 import 'devicon/devicon.min.css'
 import 'font-awesome/css/font-awesome.css'
 
-class Template extends React.Component {
+class Layout extends React.Component {
   componentDidMount() {
     emergence.init()
   }
@@ -20,15 +19,20 @@ class Template extends React.Component {
   }
 
   render() {
-    const { location, children } = this.props
+    const { children, location } = this.props
     return (
       <div>
-        <SiteNavi title={siteMetadata.title} {...this.props} />
-        {children()}
-        <Footer/>
+        <SiteNavi
+          title={siteMetadata.title}
+          {...this.props}
+          location={location}
+        />
+        {children}
+
+        <Footer />
       </div>
     )
   }
 }
 
-export default Template
+export default Layout
