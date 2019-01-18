@@ -5,6 +5,8 @@ categories:
   - feature
   - technical
   - update
+path: blog/some-updates-2019-01-17
+layout: post
 ---
 
 It's been quite a while since my last post on this blog, and until recently it's been quite a while since I last pushed any updates to Snowflake itself. I felt that some updates are in order for those that have been following this project for so long. This is not necessarily a progress report, but more of a summary of what has happened since last year, and an overview of the direction the project is going. This is going to be a very long blog post, and may be the last one for perhaps quite a while.
