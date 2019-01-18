@@ -5,6 +5,7 @@
   "author": "Ronny Chan <ronny@ronnychan.ca>",
   "dependencies": {
     "gatsby": "^2.0.0",
+    "gatsby-cli": "^2.0.0",
     "gatsby-link": "^2.0.8",
     "gatsby-plugin-catch-links": "^2.0.9",
     "gatsby-plugin-feed": "^2.0.11",
