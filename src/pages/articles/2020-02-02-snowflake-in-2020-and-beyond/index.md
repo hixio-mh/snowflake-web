@@ -26,7 +26,7 @@ Snowflake is also extremely modular and extendable. A large amount of work has g
 
 If all that sounds enticing, well, it has been my dream for the past six years to bring this to reality, and along the way I've made a lot of progress towards this dream. Unfortunately, it's taken a lot longer than I expected, but nevertheless I'm committed to eventually bringing everything I've written about here to fruition. With that out of the way, let's look at some of the things I've been working on for the past year.
 
-# New Filesystem API (Introduced in [PR #291](https://github.com/SnowflakePowered/snowflake/pull/291))
+## New Filesystem API (Introduced in [PR #291](https://github.com/SnowflakePowered/snowflake/pull/291))
 
 I did actually briefly discuss this in the context of library management last year, but since it is core to the next feature I discuss (the [installation](#installation) API), I'll go into some more detail of what this actually is.
 
@@ -50,7 +50,7 @@ The technical details are rather interesting and use the new asynchronous stream
 
 The Installation API is how Snowflake handles multi-file games. One can easily envision an installer that unpacks PKG files for RPCS3, or WUDs for Cemu. Installers can also potentially act as content providers for ROMs, downloading custom texture packs or other resources.
 
-# Syntax-tree based Configuration Serialization API ([PR #376](https://github.com/SnowflakePowered/snowflake/pull/376))
+## Syntax-tree based Configuration Serialization API ([PR #376](https://github.com/SnowflakePowered/snowflake/pull/376))
 
 Snowflake orchestrates emulators by generating configuration files that mimick the ones created by the emulators themselves. A template of a configuration file is defined in code, and Snowflake converts that template into a string representation that the emulator understands. This was first achieved using cumbersome string templates that were little more than search and replace. Because it was so cumbersome and prone to break, this was replaced with line-based serializers, which used some more logic to get rid of the search and replace, and generate the configuration file based on a string template that was supposed to fit how a line looked.
 
@@ -66,7 +66,7 @@ Input configuration is handled as a special case, since they require external in
 
 In Snowflake, a section can only have primitive and string values. However, with clever use of targets, arbitrarily nested subsections are now possible, allowing structured configuration formats to be represented. Nested values are structurally represented as nodes with children in the syntax tree, which makes generating XML, JSON, YAML, even BML very easy (as well as traditional INI and CFG based formats).
 
-# Input Enumeration API (Introduced as part of [PR #386](https://github.com/SnowflakePowered/snowflake/pull/386))
+## Input Enumeration API (Introduced as part of [PR #386](https://github.com/SnowflakePowered/snowflake/pull/386))
 
 Input is always a bit hairy, made doubly so because of how it has to be handled on a per-OS basis. I've rewritten this part from scratch very recently to support the changes in the Orchestration API, and to be a bit more flexible with what types of controllers Snowflake would work with.
 
@@ -80,7 +80,7 @@ One device can expose multiple *instances* depending on each input driver, and e
 
 Keyboard support is handled through a special case driver called `keyboard`, which is always available, and exposes the usual keys of a QWERTY keyboard and 5 button mouse. Devices that want to opt out of Snowflake's input handling (such as Real Wiimotes), can use the special `passthrough` driver that exposes nothing, and is up to the orchestration plugin to handle.
 
-# Orchestration API ([PR #513](https://github.com/SnowflakePowered/snowflake/pull/513))
+## Orchestration API ([PR #513](https://github.com/SnowflakePowered/snowflake/pull/513))
 The Orchestration API is what ties everything together and is basically the beating heart of Snowflake. It's also historically been the iffiest and most poorly designed API, because of all the cross cutting concerns involved. The Orchestration API is responsible for putting the generated configuration files into their right place, making sure everything needed to run a game is where it should be, and finally launching the game itself. It touches nearly every API that comprises Snowflake, which is why it's taken so long to get right.
 
 In fact, a lot of the motivation behind the design of the APIs written about here, and more, was to simplify the steps needed by an "orchestrator" to prepare a game for launch. 
@@ -102,7 +102,7 @@ Figuring out how to deal with this cleanly while still maintaining flexibility w
 
 There is still [some work to do here involving GraphQL bindings](https://github.com/SnowflakePowered/snowflake/pull/557), but that's most irrelevant to the core of the effort.
 
-# 2020 and onwards
+## 2020 and onwards
 
 Last year saw a major upheaval of many of Snowflake's core APIs, particularly with regards to installation and enumeration. With the completion of the Orchestration API, I want to say Snowflake is nearly ready for a 1.0 release; however without a functioning UI, I don't want to call it done just yet. I'm slowly but surely still continuing work on the UI side, and I really want to one day be able to use this thing myself, but an ETA still seems far off. I'm not quite ready to announce anything yet, but keep an eye out at [hydrogen-app.com 😉](https://hydrogen-app.com/). I hope to be able to ship an alpha before year's end, but I've written as much before, and it hasn't turned out well yet; I've been trying to ship every year for the past few years at this point! There's still so much to do with wrapping emulators with orchestrators, more scraping plugins, and of course UI design itself is a fickle beast.
 
@@ -111,4 +111,4 @@ Just by reading this blog post and others like it may make it seem that Snowflak
 My goal has always been to push what is possible with just wrapping an executable to get as much "integration" as possible without having to touch the emulators themselves. It's incredibly difficult to keep it simple, stupid, when that means pushing complexity onto the user, and instead push it towards the developer (and thus mainly myself). I have been building Snowflake with general use in mind &mdash; most, if not every public API is documented extensively, and a plethora of tests cover about 80% (and rising) of the codebase to ensure that behaviour doesn't regress between changes (as well as to provide some canned examples of usage). To help manage this complexity on the developer side, I try to make my APIs seem natural to use, although sometimes that means [somewhat](https://github.com/SnowflakePowered/snowflake/blob/master/src/Snowflake.Framework.Tests/Scraping/GroupScraper.cs) [idiosyncratic](https://github.com/SnowflakePowered/snowflake/blob/master/src/Snowflake.Plugin.Installation.BasicInstallers/SingleFileCopyInstaller.cs#L80) [ways](https://github.com/SnowflakePowered/snowflake/blob/master/src/Snowflake.Framework.Tests/Configuration/IVideoConfiguration.cs) of writing C#, hopefully nothing too out of the ordinary though.
 
 Towards the goal of integration, one of my holy grail features is an **overlay much like Steam's or Discord's that can allow frontend UI access within a running game**. I'm still looking into a way to do this well, and in a cross platform way, so I'm still looking for some help with this!
-8
+
