@@ -12,7 +12,7 @@ layout: post
 
 I’ve been working on Snowflake on and off for the [past six years](https://github.com/SnowflakePowered/snowflake/commit/d640ac2220d20f8ebec53eac189527dc998846b7). It’s been a bit of a never-ending journey, but there’s always something new to do so it always seems fresh; although I’m pretty sure I’ve rewritten (at least partially) every subsystem at least twice by now. 
 
-This is a rather long blog post that will probably end up serving as my update for the year, and goes into reasonable detail every feature that I've worked on with Snowflake since the last blog post. I've tried to keep it 
+This is a rather long blog post that will probably end up serving as my update for the year, and goes into reasonable detail every feature that I've worked on with Snowflake since the last blog post. I've tried to keep it reasonably understandable as always, but will delve quite deeply into some technical aspects from time to time.
 
 However, since my last blog post was about a year ago, I'll recap with a short explanation of what Snowflake is, and my goals with the project, before jumping into the progress I've made in the past year. If you're already familiar with what Snowflake is, feel free to scroll down past to the first heading ("New Filesystem API").
 
