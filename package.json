@@ -43,7 +43,7 @@
   "devDependencies": {
     "animate.css": "^3.5.2",
     "babel-eslint": "^10.0.1",
-    "bootstrap": "4.2.1",
+    "bootstrap": "4.3.1",
     "devicon": "https://github.com/konpa/devicon.git#v2.2",
     "emergence.js": "^1.1.2",
     "eslint": "^5.12.0",
