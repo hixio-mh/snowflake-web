@@ -98,7 +98,7 @@ An `IGameEmulation` implementation has a bunch of hooks that have to be called f
 7. When the emulator closes, save a new snapshot of the save memory as a new save game. 
 8. Finally, clean up after ourselves by deleting any temporary files and configs. 
 
-Figuring out how to deal with this cleanly while still maintaining flexibility was a huge challenge; particularly how to deal with a variety of input whatdevices, as well as what to do when an emulator closes unexpectedly. With these new updates I've been able to cleanly section off many of the cross cutting concerns, greatly simplifying the work an orchestrator needs to do.
+Figuring out how to deal with this cleanly while still maintaining flexibility was a huge challenge; particularly how to deal with a variety of input devices, as well as what to do when an emulator closes unexpectedly. With these new updates I've been able to cleanly section off many of the cross cutting concerns, greatly simplifying the work an orchestrator needs to do.
 
 There is still [some work to do here involving GraphQL bindings](https://github.com/SnowflakePowered/snowflake/pull/557), but that's most irrelevant to the core of the effort.
 
