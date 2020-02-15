@@ -16,7 +16,7 @@ That's it. End of story. Or it would be, if VCDiff as it came in the box wasn't 
 
 ![image](https://user-images.githubusercontent.com/1000503/74580271-458cac80-4f70-11ea-9930-094541cb47c2.png)
 
-8 seconds is an insane amount of time, especially when tools like xdelta can do it in a fraction of that time. Without any other options, I sat down and took a look at how to cut this down to hopefully just as fast as a C or C++ implementation of VCDIFF.
+8 seconds is an insane amount of time, especially when tools like xdelta can do it in a fraction of that time. Without any other options, I sat down and took a look at how to cut this down to hopefully become just as fast as a C or C++ implementation of VCDIFF.
 
 ## Tackling the obvious stuff
 
