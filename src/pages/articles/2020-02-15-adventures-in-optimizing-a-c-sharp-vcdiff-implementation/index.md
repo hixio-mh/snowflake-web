@@ -1,9 +1,11 @@
 ---
-title: "Adventures in Optimizing C#"
+title: "Adventures in C# Optimization"
 date: 2020-02-14
-tags:
+categories:
   - programming
   - optimization
+layout: post
+path: blog/adventures-in-c-sharp-optimization-2020-02-15
 ---
 As part of a new [game save file API](https://github.com/SnowflakePowered/snowflake/pull/571) I've been working on, I needed a library to do binary diffs in C#. Usually I could just grab a library off 
 of NuGet, but I was surprised to find that only [deltaq](https://github.com/jzebedee/deltaq), a BSDIFF implementation, was available.
