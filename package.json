@@ -33,7 +33,7 @@
     "lodash": "^4.17.4",
     "node-sass": "^4.11.0",
     "popper.js": "^1.14.6",
-    "prismjs": "^1.15.0",
+    "prismjs": "^1.22.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
