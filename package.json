@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Ronny Chan <ronny@ronnychan.ca>",
   "dependencies": {
-    "gatsby": "^2.0.0",
+    "gatsby": "^2.20.21",
     "gatsby-cli": "^2.0.0",
     "gatsby-link": "^2.0.8",
     "gatsby-plugin-catch-links": "^2.0.9",
@@ -38,7 +38,7 @@
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-lazyload": "^2.3.0",
-    "webpack": "^4.28.4"
+    "webpack": "^5.0.0"
   },
   "devDependencies": {
     "animate.css": "^3.5.2",
